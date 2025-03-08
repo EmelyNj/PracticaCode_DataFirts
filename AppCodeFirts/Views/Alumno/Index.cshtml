@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<AppCodeFirts.Models.Alumno>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Alumnos";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Registro Alumnos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">
+        <img src="~/css/add.svg" width="20" height="20">
+        Agregar Alumno
+    </a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
@@ -55,9 +58,20 @@
                 @Html.DisplayFor(modelItem => item.YearEstudio)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">
+                        <img src="~/css/edit.svg" width="20" height="20">
+                        Edit
+                    </a>
+
+                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">
+                        <img src="~/css/view.svg" width="20" height="20" alt="Ver">
+                        Details
+                    </a>
+
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                        <img src="~/css/delete.svg" width="20" height="20">
+                        Delete
+                    </a>
             </td>
         </tr>
 }

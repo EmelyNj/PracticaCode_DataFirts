@@ -9,7 +9,7 @@
 <h4>Alumno</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -43,7 +43,8 @@
                 <span asp-validation-for="YearEstudio" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input src="~/css/add.svg" type="submit" value="Create" class="btn btn-info btn-icon btn-primary"  />
+                <img src="~/css/add.svg" width="20" height="20" alt="Crear">
             </div>
         </form>
     </div>
