@@ -1,17 +1,19 @@
-﻿@model AppCodeFirts.Models.Alumno
+﻿@model PracticaCodeDataFirts.Models.Cliente
 
 @{
-    ViewData["Title"] = "Editar";
+    ViewData["Title"] = "Edit";
 }
 
-<h1 class="text-center">Editando Alumno</h1>
+<h1 class="text-center">Editando Cliente</h1>
 
+<h4>Cliente</h4>
 <hr />
 <div class="row">
     <div class="col-md-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+
             <div class="row">
                 <div class="form-group col-md-6">
                     <label asp-for="Nombre" class="control-label"></label>
@@ -21,16 +23,15 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label asp-for="Codigo" class="control-label"></label>
-                    <input asp-for="Codigo" class="form-control" />
-                    <span asp-validation-for="Codigo" class="text-danger"></span>
-                </div>
-
-                <div class="form-group col-md-6">
                     <label asp-for="Direccion" class="control-label"></label>
                     <input asp-for="Direccion" class="form-control" />
                     <span asp-validation-for="Direccion" class="text-danger"></span>
-                    <br />
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="Telefono" class="control-label"></label>
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -38,21 +39,7 @@
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-
-                <div class="form-group col-md-6">
-                    <label asp-for="FechaNacimiento" class="control-label"></label>
-                    <input asp-for="FechaNacimiento" class="form-control" />
-                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
-                    <br />
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label asp-for="YearEstudio" class="control-label"></label>
-                    <input asp-for="YearEstudio" class="form-control" />
-                    <span asp-validation-for="YearEstudio" class="text-danger"></span>
-                </div>
             </div>
-
             <br />
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">
@@ -62,12 +49,11 @@
                     </svg>
                     Guardar
                 </button>
+
             </div>
         </form>
-
     </div>
 </div>
-
 <br />
 <div>
     <a class="btn btn-secondary" asp-action="Index">
